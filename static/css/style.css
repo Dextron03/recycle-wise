@@ -1,0 +1,12 @@
+.video-container {
+    width: 50%;
+    max-width: 800px;
+    margin: auto;
+    border: 5px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.video-frame {
+    width: 100%;
+    display: block;
+}

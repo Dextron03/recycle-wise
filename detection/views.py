@@ -1,9 +1,15 @@
 from django.shortcuts import render
-from django.http import StreamingHttpResponse
+from django.http import StreamingHttpResponse, JsonResponse
 from services.video.capturar_video import gen, VideoCamera
+
+camera = VideoCamera()
 
 def home(request):
     return render(request, 'index.html')
 
 def video_feed(request):
-    return StreamingHttpResponse(gen(VideoCamera()), content_type='multipart/x-mixed-replace; boundary=frame')
+    return StreamingHttpResponse(gen(camera), content_type='multipart/x-mixed-replace; boundary=frame')
+
+def get_detections(request):
+    detections = camera.get_detections()
+    return JsonResponse(detections, safe=False)

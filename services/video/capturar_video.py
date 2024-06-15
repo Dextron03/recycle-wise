@@ -3,7 +3,6 @@ import threading
 import math
 from ultralytics import YOLO
 
-
 # Definir el modelo YOLO y las clases
 model = YOLO('modelos/best.pt')
 clsName = ['Metal', 'Vidrio', 'Plastico', 'Carton', 'Medical']
@@ -15,6 +14,7 @@ class VideoCamera(object):
         self.video.set(4, 720)
         (self.grabbed, self.frame) = self.video.read()
         self.lock = threading.Lock()
+        self.detections = []
         threading.Thread(target=self.update, args=()).start()
 
     def __del__(self):
@@ -24,6 +24,8 @@ class VideoCamera(object):
         with self.lock:
             image = self.frame.copy()
         results = model(image, stream=True, verbose=False)
+        self.detections = []
+
         for res in results:
             for box in res.boxes:
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
@@ -32,12 +34,18 @@ class VideoCamera(object):
                 conf = math.ceil(box.conf[0] * 100)
 
                 if conf > 0:
+                    self.detections.append({'class': clsName[cls], 'confidence': conf})
                     cv2.rectangle(image, (x1, y1), (x2, y2), (0, 0, 255), 2)
                     cv2.putText(image, f'{clsName[cls]} {conf}%', (x1, y1 - 10),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
         
         _, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
+
+    def get_detections(self):
+        with self.lock:
+            print(self.detections)
+            return self.detections
 
     def update(self):
         while True:
@@ -50,3 +58,5 @@ def gen(camera):
         frame = camera.get_frame()
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+        
+

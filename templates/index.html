@@ -6,12 +6,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Document</title>
+    <title>Detección de Objetos</title>
+    <style>
+        .video-container {
+            position: relative;
+            display: inline-block;
+        }
+        .data-container {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="video-container">
         <img src="{% url 'video_feed' %}" class="video-frame" width="500" height="500">
     </div>
+    <div class="data-container">
+        <h2>Detecciones:</h2>
+        <ul id="detections-list"></ul>
+    </div>
+
+    <script>
+        function fetchDetections() {
+            fetch("{% url 'get_detections' %}")
+                .then(response => response.json())
+                .then(data => {
+                    const detectionsList = document.getElementById('detections-list');
+                    detectionsList.innerHTML = '';
+                    data.forEach(detection => {
+                        const li = document.createElement('li');
+                        li.textContent = `${detection.class}: ${detection.confidence}%`;
+                        detectionsList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error fetching detections:', error));
+        }
+    
+        setInterval(fetchDetections, 1000);
+    </script>
+    
 </body>
 </html>
-

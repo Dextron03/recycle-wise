@@ -8,8 +8,8 @@ model = YOLO('modelos/best.pt')
 clsName = ['Metal', 'Vidrio', 'Plastico', 'Carton', 'Medical']
 
 class VideoCamera(object):
-    def __init__(self):
-        self.video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    def __init__(self, camera_index=1):  # Cambiar a 1 para usar DroidCam
+        self.video = cv2.VideoCapture(camera_index, cv2.CAP_DSHOW)
         self.video.set(3, 1280)
         self.video.set(4, 720)
         (self.grabbed, self.frame) = self.video.read()
@@ -58,5 +58,3 @@ def gen(camera):
         frame = camera.get_frame()
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-        
-

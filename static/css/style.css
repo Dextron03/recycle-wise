@@ -1,12 +1,2 @@
-.video-container {
-    width: 50%;
-    max-width: 800px;
-    margin: auto;
-    border: 5px solid #333;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.video-frame {
-    width: 100%;
-    display: block;
-}
+.container { text-align: center; margin-top: 50px; }
+#uploadedImage { max-width: 100%; height: auto; }

@@ -8,7 +8,7 @@ model = YOLO('modelos/best.pt')
 clsName = ['Metal', 'Vidrio', 'Plastico', 'Carton', 'Medical']
 
 class VideoCamera(object):
-    def __init__(self, camera_index=1):  # Cambiar a 1 para usar DroidCam
+    def __init__(self, camera_index=0):  # Cambiar a 2 para usar DroidCam y 0 para la camara por defecto
         self.video = cv2.VideoCapture(camera_index, cv2.CAP_DSHOW)
         self.video.set(3, 1280)
         self.video.set(4, 720)
@@ -44,8 +44,9 @@ class VideoCamera(object):
 
     def get_detections(self):
         with self.lock:
-            print(self.detections)
-            return self.detections
+            if len(self.detections) != 0:
+                print(self.detections)
+                return self.detections
 
     def update(self):
         while True:
@@ -53,7 +54,7 @@ class VideoCamera(object):
             with self.lock:
                 self.frame = self.frame
 
-def gen(camera):
+def gen(camera:VideoCamera):
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'

@@ -1,8 +1,9 @@
+# views.py
 from django.shortcuts import render
 from django.http import StreamingHttpResponse, JsonResponse
 from services.video.capturar_video import gen, VideoCamera
 
-camera = VideoCamera(camera_index=2)
+camera = VideoCamera(camera_index=2) # 0 para la camara de la maquina, 2 para la camara de droidcam
 
 def home(request):
     return render(request, 'index.html')

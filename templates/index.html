@@ -7,15 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Detección de Objetos</title>
-    <style>
-        .video-container {
-            position: relative;
-            display: inline-block;
-        }
-        .data-container {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <div class="video-container">
@@ -26,34 +17,6 @@
         <ul id="detections-list"></ul>
     </div>
 
-    <script>
-        function fetchDetections() {
-            fetch("{% url 'get_detections' %}")
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const detectionsList = document.getElementById('detections-list');
-                    detectionsList.innerHTML = '';
-                    if (Array.isArray(data)) {
-                        data.forEach(detection => {
-                            const li = document.createElement('li');
-                            li.textContent = `${detection.class}: ${detection.confidence}%`;
-                            detectionsList.appendChild(li);
-                        });
-                    } else {
-                        console.error('Detections data is not an array or is null');
-                    }
-                })
-                .catch(error => console.error('Error fetching detections:', error));
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setInterval(fetchDetections, 1000);
-        });
-    </script>
+    <script src="{% static 'js/fetch_detection.js' %}"></script>
 </body>
 </html>

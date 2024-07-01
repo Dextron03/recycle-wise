@@ -1,3 +1,4 @@
+
 import cv2
 import threading
 import math
@@ -24,7 +25,7 @@ class VideoCamera(object):
         with self.lock:
             image = self.frame.copy()
         results = model(image, stream=True, verbose=False)
-        self.detections = []
+        detections = []
 
         for res in results:
             for box in res.boxes:
@@ -34,19 +35,23 @@ class VideoCamera(object):
                 conf = math.ceil(box.conf[0] * 100)
 
                 if conf > 0:
-                    self.detections.append({'class': clsName[cls], 'confidence': conf})
+                    detections.append({'class': clsName[cls], 'confidence': conf})
                     cv2.rectangle(image, (x1, y1), (x2, y2), (0, 0, 255), 2)
                     cv2.putText(image, f'{clsName[cls]} {conf}%', (x1, y1 - 10),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
+
+        with self.lock:
+            self.detections = detections
         
         _, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
 
     def get_detections(self):
         with self.lock:
-            if len(self.detections) != 0:
-                print(self.detections)
+            if self.detections:
                 return self.detections
+            else:
+                return []
 
     def update(self):
         while True:
@@ -54,7 +59,7 @@ class VideoCamera(object):
             with self.lock:
                 self.frame = self.frame
 
-def gen(camera:VideoCamera):
+def gen(camera: VideoCamera):
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'

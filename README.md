@@ -2,13 +2,13 @@
 
 RecycleWise es una aplicación web basada en Django que tiene como objetivo mejorar los esfuerzos de reciclaje en todo el mundo. Mediante la integración de algoritmos de machine learning, nuestro proyecto ofrece un sistema de detección inteligente que identifica con precisión varios tipos de materiales reciclables a partir de imágenes. Este proyecto no solo busca hacer que el reciclaje sea más accesible y eficiente, sino que también tiene como objetivo educar e involucrar a la comunidad sobre la importancia del reciclaje para la sostenibilidad ambiental.
 
-## Características Principales
+## Características principales
 
 - **Detección Avanzada de Materiales**: En el corazón de RecycleWise está su potente capacidad de detección de materiales, impulsada por un modelo de machine learning (`modelos/best.pt`). Este modelo puede distinguir entre diferentes materiales reciclables, como plásticos, metales, vidrio y papel, con una precisión media-alta.
 
 - **Interfaz de Usuario Interactiva**: La aplicación cuenta con una interfaz web fácil de usar que simplifica el proceso de detección de materiales. Está diseñada para garantizar una experiencia fluida para usuarios de todas las edades.
 
-## Especificaciones Técnicas
+## Especificaciones técnicas
 
 - **Framework Backend**: Django 5.0.6, elegido por su escalabilidad y facilidad de uso en la construcción de aplicaciones web complejas.
 - **Biblioteca de Aprendizaje Automático**: PyTorch, utilizado para entrenar e implementar el modelo de detección de materiales.
@@ -54,11 +54,11 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
    python manage.py runserver
    ```
 
-## Cómo Usar
+## Cómo usar la app
 
 Después de correr el servidor puedes acceder a la aplicación yendo a la URL `http://127.0.0.1:8000/` en el navegador. La detección de objetos es en vivo, por lo que solo debes poner un objeto delante de la cámara y será reconocido y clasificado deacuerdo al material.
 
-## Desarrollo y Personalización
+## Desarrollo y personalización
 
 - **Modelos**: Mejora o personaliza los modelos de base de datos dentro de `detection/models.py` para ajustarse a tus requisitos específicos.
 - **Vistas**: Implementa o modifica la lógica de la aplicación en `detection/views.py` para controlar cómo se procesan y presentan los datos.

@@ -1,2 +1,17 @@
-.container { text-align: center; margin-top: 50px; }
-#uploadedImage { max-width: 100%; height: auto; }
+.container {
+    text-align: center;
+    margin-top: 50px; 
+}
+
+#uploadedImage {
+    max-width: 100%;
+    height: auto; 
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+}
+.data-container {
+    margin-top: 20px;
+}

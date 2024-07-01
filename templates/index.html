@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Detección de Objetos</title>
+    <title>Object Detection</title>
 </head>
 <body>
     <div class="video-container">
@@ -14,9 +14,13 @@
     </div>
     <div class="data-container">
         <h2>Detecciones:</h2>
-        <ul id="detections-list"></ul>
+        <ul id="detections-list">
+            {% comment %}Los valores iniciales para la demostración.{% endcomment %} 
+            <li>Material: </li>
+            <li>Percentage: </li>
+        </ul>
     </div>
 
-    <script src="{% static 'js/fetch_detection.js' %}"></script>
+    <script src="{% static 'js/fetch_detections.js' %}"></script>
 </body>
 </html>

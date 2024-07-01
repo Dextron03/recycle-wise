@@ -12,13 +12,16 @@
     <div class="video-container">
         <img src="{% url 'video_feed' %}" class="video-frame" width="500" height="500" alt="Video feed">
     </div>
+    
     <div class="data-container">
         <h2>Detecciones:</h2>
         <ul id="detections-list">
             {% comment %}Los valores iniciales para la demostración.{% endcomment %} 
             <li>Material: </li>
             <li>Percentage: </li>
+            
         </ul>
+        <img id="material-image" src="{% static 'imgs/default.png' %}" alt="material-image" srcset="">
     </div>
 
     <script src="{% static 'js/fetch_detections.js' %}"></script>

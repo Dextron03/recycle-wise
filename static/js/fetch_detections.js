@@ -8,6 +8,7 @@ function fetchDetections() {
         })
         .then(data => {
             const detectionsList = document.getElementById('detections-list');
+            const materialImage = document.getElementById('material-image');
             detectionsList.innerHTML = '';  // Borrar contenido anterior
 
             if (Array.isArray(data)) {
@@ -20,6 +21,13 @@ function fetchDetections() {
 
                     detectionsList.appendChild(materialItem);
                     detectionsList.appendChild(confidenceItem);
+
+                    // Construir la ruta de la imagen
+                    const newSrc = `static/imgs/${detection.class}.png`;
+                    console.log(`Cambiando imagen a: ${newSrc}`);
+                    
+                    // Actualizar el src de la imagen según el material
+                    materialImage.src = newSrc;
                 });
             } else {
                 console.error('Los datos de detecciones no son una matriz o son nulos');

@@ -9,12 +9,19 @@
     <title>Object Detection</title>
 </head>
 <body>
+    <header>
+        <h1>✨ Masters AI ✨</h1>    
+    </header>
+    
     <div class="video-container">
-        <img src="{% url 'video_feed' %}" class="video-frame" width="500" height="500" alt="Video feed">
+        <h1>Centro de detección:</h1>
+        <hr/>
+        <img src="{% url 'video_feed' %}" class="video-frame" width="350" height="450" alt="Video feed">
     </div>
     
     <div class="data-container">
-        <h2>Detecciones:</h2>
+        <h1>Detecciones:</h1>
+        <hr/>
         <ul id="detections-list">
             {% comment %}Los valores iniciales para la demostración.{% endcomment %} 
             <li>Material: </li>

@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +10,24 @@
 </head>
 <body>
     <header>
-        <h1>✨ Masters AI ✨</h1>    
+        <h1>✨ MASTERS AI ✨</h1>    
     </header>
     
     <div class="video-container">
-        <h1>Centro de detección:</h1>
+        <h2>Centro de detección:</h2>
         <hr/>
-        <img src="{% url 'video_feed' %}" class="video-frame" width="350" height="450" alt="Video feed">
+        <img src="{% url 'video_feed' %}" class="video-frame" alt="Video feed">
     </div>
     
     <div class="data-container">
-        <h1>Detecciones:</h1>
+        <h2>Detecciones:</h2>
         <hr/>
         <ul id="detections-list">
             {% comment %}Los valores iniciales para la demostración.{% endcomment %} 
             <li>Material: </li>
             <li>Percentage: </li>
-            
         </ul>
+        <h2>Tipo de Reciclaje:</h2>
         <img id="material-image" src="{% static 'imgs/default.png' %}" alt="material-image" srcset="">
     </div>
 

@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import StreamingHttpResponse, JsonResponse
 from services.video.capturar_video import generate_frame, VideoCamera
 
-camera = VideoCamera(camera_index=2)
+camera = VideoCamera(camera_index=0)
 
 def home(request):
     return render(request, 'index.html')

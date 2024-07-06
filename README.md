@@ -37,18 +37,31 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
    cd RecycleWise
    ```
 
-3. **Instalar Paquetes Python Requeridos**:
+3. **Crea un entorno virutal:**
+   ```sh 
+   python -m venv nombre_de_tu_entorno
+   ```
+
+4. **Entrar al entorno virtual:**
+   ```sh
+   .\nombre_del_entorno\Scripts\activate # CMD
+   ```
+   ```sh
+   ./nombre_del_entorno/Scripts/activate # Powershell
+   ```
+
+5. **Instalar Paquetes Python Requeridos**:
    ```sh
    pip install -r requirements.txt
    ```
 
-4. **Configuración de la Base de Datos**:
+6. **Configuración de la Base de Datos**:
    Aplica las migraciones de Django para configurar el esquema de tu base de datos:
    ```sh
    python manage.py migrate
    ```
 
-5. **Iniciar el Servidor de Desarrollo**:
+7. **Iniciar el Servidor de Desarrollo**:
    Corre la aplicación localmente:
    ```sh
    python manage.py runserver

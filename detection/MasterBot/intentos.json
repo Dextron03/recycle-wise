@@ -1,0 +1,130 @@
+{
+    "intents": [
+        {
+            "tag": "saludos",
+            "patterns": [
+                "Hola",
+                "Como estas",
+                "Hay alguien aqui?",
+                "Hello",
+                "Buenos dias",
+                "Saludos",
+                "Que tal",
+                "Como te va",
+                "Hola, que tal?"
+            ],
+            "responses": [
+                "Hola, gracias por tu visita",
+                "Gusto en verte de nuevo",
+                "Hola, en que puedo ayudarte?",
+                "Hola! Como estas?",
+                "Buenos dias! En que puedo ayudarte?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "despedidas",
+            "patterns": [
+                "adios",
+                "nos vemos luego",
+                "regresa pronto",
+                "hasta luego",
+                "chau",
+                "me tengo que ir"
+            ],
+            "responses": [
+                "Hasta luego, gracias por tu visita",
+                "Que tengas un buen dia",
+                "Adios! Vuelve pronto",
+                "Cuidate, hasta la proxima!",
+                "Nos vemos pronto, adios!"
+            ]
+        },
+        {
+            "tag": "agradecimientos",
+            "patterns": [
+                "gracias",
+                "muchas gracias",
+                "te lo agradezco",
+                "eso es de ayuda",
+                "thank you",
+                "thanks"
+            ],
+            "responses": [
+                "De nada!",
+                "A ti!",
+                "Con gusto!",
+                "Feliz de ayudarte!",
+                "Para eso estoy!"
+            ]
+        },
+        {
+            "tag": "chatbot",
+            "patterns": [
+                "Quien construyo este chatbot?",
+                "Hablame del chatbot",
+                "Como se llama este chatbot?",
+                "Quien eres tu?"
+            ],
+            "responses": [
+                "Hola, soy un chatbot disenado por MasterAI.",
+                "Gracias por preguntar. Fui disenado por MasterAI Company.",
+                "Soy un chatbot creado para asistirte.",
+                "Soy un chatbot, tu asistente virtual."
+            ]
+        },
+        {
+            "tag": "ubicacion",
+            "patterns": [
+                "Cual es tu ubicacion?",
+                "Donde estas ubicado?",
+                "Cual es tu direccion?",
+                "Donde puedo encontrarte?"
+            ],
+            "responses": [
+                "Estamos en el mejor pais del mundo, Republica Dominicana.",
+                "Puedes visitarnos en RD para conocernos.",
+                "Gracias por tu interes. Vivo en India.",
+                "Nos encontramos en Santo Domingo, una ciudad llena de diversidades."
+            ]
+        },
+        {
+            "tag": "peliculas",
+            "patterns": [
+                "Cual es tu pelicula favorita?",
+                "Sugereme algunas peliculas",
+                "Recomiendame peliculas",
+                "Que peliculas me recomiendas?"
+            ],
+            "responses": [
+                "3 Idiots",
+                "Hera Pheri",
+                "Lage Raho Munna Bhai",
+                "OMG: Oh My God!",
+                "PK",
+                "Yeh Jawani Hai Deewani",
+                "Zindagi Na Milegi Dobara",
+                "Ludo",
+                "El Laberinto del Fauno",
+                "Amores Perros",
+                "Coco",
+                "Roma"
+            ]
+        },
+        {
+            "tag": "acerca_de",
+            "patterns": [
+                "Quien eres?",
+                "Hablame de ti",
+                "Que es esto?",
+                "Cuentame sobre ti"
+            ],
+            "responses": [
+                "Hola, somos MasterBot. Encantado de conocerte. Creamos este chatbot para proyecto final de nuestro curso de inteligencia artificial.",
+                "Gracias por preguntar. Soy MasterBot, un chatbot creado por programadores de profesion y entusiasta del aprendizaje automatico por pasion.",
+                "Soy un chatbot creado para ayudarte con tus preguntas.",
+                "Me llamo MasterBot y soy el creador de este chatbot."
+            ]
+        }
+    ]
+}

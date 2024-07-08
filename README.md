@@ -2,6 +2,12 @@
 
 RecycleWise es una aplicación web basada en Django que tiene como objetivo mejorar los esfuerzos de reciclaje en todo el mundo. Mediante la integración de algoritmos de machine learning, nuestro proyecto ofrece un sistema de detección inteligente que identifica con precisión varios tipos de materiales reciclables a partir de video en tiempo real. Este proyecto no solo busca hacer que el reciclaje sea más accesible y eficiente, sino que también tiene como objetivo educar e involucrar a la comunidad sobre la importancia del reciclaje para la sostenibilidad ambiental.
 
+
+<h1 align="center">
+COLOCAR IMAGEN DEL PROYECTO O UN GIF
+</h1>
+
+
 ## Características principales
 
 - **Detección Avanzada de Materiales**: En el corazón de RecycleWise está su potente capacidad de detección de materiales, impulsada por un modelo de machine learning (`modelos/best.pt`). Este modelo puede distinguir entre diferentes materiales reciclables, como plásticos, metales, vidrio y papel, con una precisión media-alta.
@@ -14,6 +20,19 @@ RecycleWise es una aplicación web basada en Django que tiene como objetivo mejo
 - **Biblioteca de Aprendizaje Automático**: PyTorch, utilizado para entrenar e implementar el modelo de detección de materiales.
 - **Tecnologías Frontend**: HTML5, CSS3 y JavaScript, asegurando una interfaz web moderna y receptiva.
 - **Base de Datos**: SQLite (por defecto), con soporte para PostgreSQL en entornos de producción.
+
+- **DataSet / Conjunto de datos**: Se utilizo una dataset libre, el cual cuenta con una cantidad decente de 1500 imagenes, para fines de etiquetado. [Plastic Waste DataBase of Images – WaDaBa. Bobulski J., Piatkowski J.(2018)](http://wadaba.pcz.pl/#download)
+
+- **Procedo de etiquetado:** Se utilizó `Grounding Dino` para el etiquetado de las imagenes anteriores.
+
+## Metricas del proceso de entrenamiento:
+
+### Curva de precisión y confidencia:
+![image](https://github.com/Dextron03/recycle-wise/assets/67524129/65098678-f08a-4510-888c-fa21cca2d335)
+
+### Curva de confidencia:
+![image](https://github.com/Dextron03/recycle-wise/assets/67524129/3533985a-c918-43cc-879d-74bc9216cb3b)
+
 
 ## Comenzando con RecycleWise
 
@@ -80,3 +99,27 @@ Después de correr el servidor puedes acceder a la aplicación yendo a la URL `h
 ## Contribuir a RecycleWise
 
 Damos la bienvenida a las contribuciones de desarrolladores, ambientalistas y cualquier persona apasionada por el reciclaje. Ya sean correcciones de errores, mejoras de características o mejoras en la documentación, su aporte es valioso. Puedes hacer un fork del repositorio o crear un pull request para ser revisado y aprobado.
+
+
+## Créditos y referencias:
+Banco Mundial. (2018). What a Waste 2.0: A Global Snapshot of Solid Waste Management to 2050. Retrieved from World Bank.
+
+Sánchez, S. (2023). AprendeIngenia/recyclingAI. Hugging Face. https://huggingface.co/AprendeIngenia/recyclingAI/tree/main/Modelos 
+
+*Especial mención a Santiago Sanchez de aprende-ingenia, quien entrenó dicho modelo para que pueda ser usado por la comunidad.*
+
+Mikołajczyk, A. (2024). Waste Dataset Review. GitHub. https://github.com/AgaMiko/waste-datasets-review
+
+Dataset, usado:
+
+Bobulski J., Piatkowski J., PET waste classification method and Plastic Waste DataBase WaDaBa, Conference Proc. IP&C 2018, Advances in Intelligent Systems and Computing, vol. 681, Springer Verlag, 2018, pp.57-64.[PDF](http://wadaba.pcz.pl/#download)
+
+Bobulski J., Kubanek M., Deep Learning for Plastic Waste Classification System, Applied Computational Intelligence and Soft Computing, 2021, art. no. 6626948 DOI: 10.1155/2021/6626948 
+http://wadaba.pcz.pl/#download
+
+
+## Collaborators behind the scene:
+- ✨ Edwin Roman.
+- ✨ Braily Roman (The Goat).
+- ✨ Samil  Quezada.
+- ✨ Franyel Sánchez.

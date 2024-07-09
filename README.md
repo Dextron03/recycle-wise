@@ -7,7 +7,7 @@ RecycleWise es una aplicación web basada en Django que tiene como objetivo mejo
 COLOCAR IMAGEN DEL PROYECTO O UN GIF
 </h1>
 
-![Alt Text]([https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif](https://github.com/Dextron03/recycle-wise/blob/5c7996d87de6a1137eec2da3211214268a841d9f/RecycleWise-ObjectDetection-ezgif.com-video-to-gif-converter.gif))
+![Alt Text](https://github.com/Dextron03/recycle-wise/blob/master/RecycleWise-ObjectDetection-ezgif.com-video-to-gif-converter.gif)
 
 ## Características principales
 

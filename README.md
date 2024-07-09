@@ -7,7 +7,7 @@ RecycleWise es una aplicación web basada en Django que tiene como objetivo mejo
 IMÁGENES DEL FUNCIONAMIENTO DEL PROYECTO
 </h1>
 
-![Alt Text](https://github.com/Dextron03/recycle-wise/blob/master/RecycleWise%20-%20Object%20Detection.gif)
+<div style="padding:53.57% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/980972000?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="RecycleWise - Object Detection"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Características principales
 

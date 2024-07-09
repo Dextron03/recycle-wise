@@ -7,6 +7,7 @@ RecycleWise es una aplicación web basada en Django que tiene como objetivo mejo
 COLOCAR IMAGEN DEL PROYECTO O UN GIF
 </h1>
 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 ## Características principales
 

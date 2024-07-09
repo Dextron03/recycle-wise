@@ -9,10 +9,7 @@ RecycleWise es una aplicación web basada en Django que tiene como objetivo mejo
 ![image](https://github.com/Dextron03/recycle-wise/assets/67524129/e8c0959e-3ea1-4e2a-9ddb-6d12baca4081)
 <br>
 
-<h5 align="center">
-    
-[Hacer click para ver el video.](https://vimeo.com/980972000)
-</h5>
+
 
 </h1>
 

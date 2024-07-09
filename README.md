@@ -3,8 +3,17 @@
 RecycleWise es una aplicación web basada en Django que tiene como objetivo mejorar los esfuerzos de reciclaje en todo el mundo. Mediante la integración de algoritmos de machine learning, nuestro proyecto ofrece un sistema de detección inteligente que identifica con precisión varios tipos de materiales reciclables a partir de video en tiempo real. Este proyecto no solo busca hacer que el reciclaje sea más accesible y eficiente, sino que también tiene como objetivo educar e involucrar a la comunidad sobre la importancia del reciclaje para la sostenibilidad ambiental.
 
 
+    
 <h1 align="center">
-COLOCAR IMAGEN DEL PROYECTO O UN GIF
+
+![image](https://github.com/Dextron03/recycle-wise/assets/67524129/e8c0959e-3ea1-4e2a-9ddb-6d12baca4081)
+<br>
+
+<h5 align="center">
+    
+[Hacer click para ver el video.](https://vimeo.com/980972000)
+</h5>
+
 </h1>
 
 

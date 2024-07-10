@@ -32,6 +32,15 @@ RecycleWise es una aplicación web basada en Django que tiene como objetivo mejo
 
 - **Procedo de etiquetado:** Se utilizó `Grounding Dino` para el etiquetado de las imagenes anteriores.
 
+
+## Arquitectura del proyecto:
+
+<h1 align="center">
+
+![Arquitectura del proyecto](diagram-project-architecture.png)
+
+</h1>
+
 ## Metricas del proceso de entrenamiento:
 
 ### Curva de precisión y confidencia:
